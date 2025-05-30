@@ -1,0 +1,309 @@
+/* 基本リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* フォントと背景 */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+/* コンテナ共通 */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* ヘッダー */
+.header {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-menu li a:hover {
+  text-decoration: underline;
+}
+
+/* ハンバーガーメニュー */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+/* ヒーローセクション */
+.hero {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0078D7;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+/* サービス紹介 */
+.services-section,
+.reasons-section,
+.contact-section {
+  margin-top: 40px;
+}
+
+.services-section h2,
+.reasons-section h2,
+.contact-section h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  border-bottom: 2px solid #0078D7;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.service-box,
+.reason-box {
+  margin-bottom: 30px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  border-left: 5px solid #0078D7;
+}
+
+.service-box h3,
+.reason-box h3 {
+  margin-bottom: 10px;
+  color: #0078D7;
+}
+
+/* フッター */
+.footer {
+  background-color: #3c9783;
+  color: #fff;
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 14px;
+}
+
+/* お問い合わせフォーム */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  padding: 10px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #3c9783;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  width: 200px;
+  align-self: center;
+}
+
+/* アニメーション */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+/* ヘッダー全体の背景をきれいな水色に変更 */
+.header {
+  background-color: #3c9783; /* パステル系のきれいな水色 */
+  color: #ffffff;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ロゴ文字（巧営業） */
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff; /* 白文字にして目立たせる */
+}
+
+/* ナビゲーションメニューのリンク */
+.nav-menu li a {
+  color: #ffffff; /* 白にしてヘッダーと調和させる */
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* ホバー時の色変更 */
+.nav-menu li a:hover {
+  color: #003d4d; /* 少し濃い青系にして視認性UP */
+}
+/* フッター全体のデザイン */
+.footer {
+  background-color: #4b9f91; /* 例：落ち着いた緑（変更可能） */
+  color: #ffffff;
+  padding: 40px 0;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* フッター内のリンク色を白に */
+.footer nav a {
+  color: #ffffff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* リンクにカーソルを合わせたときの色（少し薄く） */
+.footer nav a:hover {
+  color: #d0f0ec;
+  text-decoration: underline;
+}
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  position: relative;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.nav-menu a:hover::after {
+  transform: scaleX(1);
+}
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.nav-menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(1); /* 最初から表示 */
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+  transform: scaleX(1.2); /* ホバー時に少し伸びる動き */
+}
